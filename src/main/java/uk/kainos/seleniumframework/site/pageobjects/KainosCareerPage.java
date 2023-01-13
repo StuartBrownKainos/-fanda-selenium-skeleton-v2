@@ -6,25 +6,30 @@ import org.openqa.selenium.support.FindBy;
 
 import uk.kainos.seleniumframework.site.Site;
 
+import java.net.URL;
+
 public class KainosCareerPage extends Site {
 
-    private static final String PAGE_TITLE = "Careers";
+    private static final String PAGE_TITLE = "Building a better\n" +
+            "world begins with you";
 
-    @FindBy(id = "ccc-recommended-settings")
+
+    @FindBy(xpath = "/html/body/div[2]/section/div/div/div/div[2]/button/ppc-content")
     private WebElement acceptCookiesButton;
 
-    @FindBy(id = "header") private WebElement pageHeader;
+    @FindBy(xpath = "/html/body/div[2]/div[2]/section[4]/div/div/div/div/div/div/div/ppc-container[1]/h1/ppc-content") private WebElement pageHeader;
 
     public KainosCareerPage(WebDriver driver) {
         super(driver);
     }
-
-    public void verifyPageHeader() {
-        verifyPageTitle(pageHeader.getText(), PAGE_TITLE);
-    }
-
     public KainosCareerPage acceptCookies() {
         acceptCookiesButton.click();
         return this;
     }
+    public void verifyPageHeader() {
+        verifyPageTitle(pageHeader.getText(), PAGE_TITLE);
+    }
+
+
+
 }
