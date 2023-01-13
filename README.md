@@ -1,1 +1,1 @@
-# EPRSkeleton
+# SeleniumSkeleton
