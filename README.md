@@ -1,5 +1,5 @@
-# cucumber-example
-This project is a Cucumber Selenium UI automation test example framework for teaching automated testing. 
+# Selenium Example
+This project is a Cucumber Selenium UI automation test example framework for automated testing. 
 It is written in Java with Cucumber BDD, TestNG and produces reports of test results.
 
 ## Getting Started
